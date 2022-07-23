@@ -242,8 +242,8 @@ In this example, the following rules apply:
 -->
 在这一示例中，所应用的规则如下：
 
-* 节点**必须**包含一个键名为 `topology.kubernetes.io/zone` 的标签，
-  并且该标签的取值**必须**为 `antarctica-east1` 或 `antarctica-west1`。
+* 节点**必须**包含一个键名为 `kubernetes.io/os` 的标签，
+  并且该标签的取值**必须**为 `linux`。
 * 节点**最好**具有一个键名为 `another-node-label-key` 且取值为
   `another-node-label-value` 的标签。
 
@@ -343,7 +343,8 @@ If you want Kubernetes to successfully schedule the Pods in this example, you
 must have existing nodes with the `kubernetes.io/os=linux` label.
 -->
 如果你希望 Kubernetes 能够成功地调度此例中的 Pod，你必须拥有打了
-`kubernetes.io/os=linux` 标签的节点。
+`topology.kubernetes.io/zone` 标签的节点，并且该标签的取值必须为 antarctica-east1 
+或 antarctica-west1。
 {{< /note >}}
 
 <!--
